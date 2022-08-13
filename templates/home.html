@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMOTION DETECTION</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+   
+</head>
+<body class="full-form">
+    <!-- <div class="full-form"> -->
+    <div class="center">
+        <div class="form-input">
+          <label for="file-ip-1">Upload Image</label>
+          
+<form action="{{url_for('pred')}}" method="POST" enctype="multipart/form-data">
+   
+    <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);" name="process_image"></label>
+    
+   
+    <div class="preview">
+        <img id="file-ip-1-preview">
+      </div>
+    </div>
+    
+    
+  </div>
+  <input type ="submit"  class="action-button animate button" name="btn">
+  
+</form>
+<!-- </div> -->
+
+<script src="{{url_for('static', filename='app.js')}}"></script>
+</body>
+</html>
